@@ -44,15 +44,17 @@
 
             axios.get(url)
                 .then(function (response) {
-                    // handle success
+                    
                     console.log("success response")
                     console.log(response.data);
 
                     document.querySelector("#result").innerHTML = response.data.name
-                    document.querySelector("#result").innerHTML += '<br />'
-                    document.querySelector("#result").innerHTML += `${response.data.main.temp}°C `
+                    document.querySelector("#result").innerHTML = '<br />'
+                    document.querySelector("#result").innerHTML = `${response.data.main.temp}°C `
+                    document.querySelector("#result").innerHTML = `${response.data.main.temp}°C `
 
-                    document.querySelector("#subtitle").innerHTML +=
+
+                    document.querySelector("#subtitle").innerHTML =
                         `Min: ${response.data.main.temp_min}°C - Max: ${response.data.main.temp_min}°C`
 
                 })
