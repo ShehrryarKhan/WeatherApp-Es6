@@ -1,79 +1,108 @@
-*{
+* {
   margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-background: linear-gradient(90deg, #72959b 0%, #333363 100%); 
-font-family: 'monsterrat' sans-serif;
-
-  
-  
-  
+body {
+  font-family: 'montserrat', sans-serif;
+  background-image: url('rainy-10.gif');
+  background-size: cover;
+  background-position: top center;
 }
-.box {
+
+.app-wrap {
   display: flex;
-  background: #fff;
   flex-direction: column;
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 3, 0.938), rgba(0, 0, 0, 0.6));
+}
+
+header {
+  display: flex;
   justify-content: center;
   align-items: center;
-  /* border: 2px solid black; */
-  
-  border-radius: 15px;
-  height: 900px;
-  width: 900px;
-  margin: 200px auto;
-  padding: 0 20px;
-  z-index: 1;
-  font-weight: bolder;
-  font-size: 25px;
-  background-image: url(https://cdn.pixabay.com/photo/2017/08/25/13/51/cloud-2680242_960_720.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.innerbox{
-  width: 500px;
-  height: 500px;
-  margin: auto;
-  padding: 10px;
+  padding: 50px 15px 15px;
 }
 
-.box button {
-  padding: 5px;
-  /* border: 1px solid black; */
-  background-color: #fff;
-  border-radius: 5px;
-  font-size: 1.2rem;
-  width: 150px;
-  margin: 15px;
-  padding: 5px;
-}
-
-.box button:hover {
-  color: #fff;
-  background: linear-gradient(90deg, hsl(195, 62%, 42%) 0%, #eeeeed 100%);
-  border:1px solid transparent !important;
-  transition: 3s;
-  color: black;
-  font-family: sans-serif;
-}
-
-input[type=text] {
-  width: 300px;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  font-size: 25px;
-  outline:none;
+header input {
+  width: 100%;
+  max-width: 280px;
+  padding: 10px 15px;
   border: none;
-  /* background-color: rgba(3, 39, 48,); */
-    border-radius: 16px 0px 16px 0px;
-    border-bottom: 3px solid cadetblue;
-    color: black;
-    font-size: 20px;
-    font-weight: 300;
-    transition: 0.2s ease-out;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 16px 0px 16px 0px;
+  border-bottom: 3px solid #DF8E00;
+  
+  color: #313131;
+  font-size: 20px;
+  font-weight: 300;
+  transition: 0.2s ease-out;
+}
 
+header input:focus {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+main {
+  flex: 1 1 100%;
+  padding: 25px 25px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.sub-main{
+  background-color:rgba(240,240, 240, 0.3);
+  width: 280px;
+  padding: 20px 30px;
+  border-radius: 20px;
+
+}
+
+.location .city {
+  color: #FFF;
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.location .date {
+  color: #FFF;
+  font-size: 16px;
+}
+
+.current .temp {
+  color: #FFF;
+  font-size: 102px;
+  font-weight: 900;
+  margin: 30px 0px;
+  text-shadow: 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.current .temp span {
+  font-weight: 500;
+}
+
+.current .weather {
+  color: #FFF;
+  font-size: 32px;
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom: 15px;
+  text-shadow: 0px 3px rgba(0, 0, 0, 0.4);
+}
+
+.current .hi-low {
+  color: #FFF;
+  font-size: 24px;
+  font-weight: 500;
+  text-shadow: 0px 4px rgba(0, 0, 0, 0.4);
+}
+
+.search-box::placeholder { 
+  color: rgb(255, 255, 255);
+  opacity: 1;
 }
